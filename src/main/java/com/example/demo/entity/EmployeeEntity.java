@@ -50,6 +50,12 @@ public class EmployeeEntity {
 		this.employeeId = employeeId;
 		this.employeeAddress = employeeAddress;
 	}
+	
+	public EmployeeEntity(String employeeName, String employeeAddress) {
+		super();
+		this.employeeName = employeeName;
+		this.employeeAddress = employeeAddress;
+	}
 
 	public EmployeeEntity() {
 		super();

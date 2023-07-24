@@ -47,6 +47,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	
+	@Transactional
 	@Override
 	public EmployeeEntity updateEmployee(Long id, EmployeeEntity employeeEntity) throws Exception {
 		
@@ -54,8 +55,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 		foundEmp.setEmployeeName(employeeEntity.getEmployeeName());
 		foundEmp.setEmployeeAddress(employeeEntity.getEmployeeAddress());
 //		foundEmp.setEmployeeId(employeeEntity.getEmployeeId());
-//		this.employeeDao.updateEmployeeById(foundEmp.getEmployeeAddress(), foundEmp.getEmployeeName(), id);
-		this.employeeDao.save(foundEmp);
+		this.employeeDao.updateEmployeeById(foundEmp.getEmployeeAddress(), foundEmp.getEmployeeName(), id);
+		//this.employeeDao.save(foundEmp);
 		return foundEmp;
 	}
 
